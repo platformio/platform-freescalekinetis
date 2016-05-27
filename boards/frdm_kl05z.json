@@ -1,0 +1,17 @@
+{
+  "build": {
+    "cpu": "cortex-m0plus", 
+    "f_cpu": "48000000L", 
+    "mcu": "mkl05z32vfm4"
+  }, 
+  "frameworks": [
+    "mbed"
+  ], 
+  "name": "Freescale Kinetis FRDM-KL05Z", 
+  "upload": {
+    "maximum_ram_size": 4096, 
+    "maximum_size": 32768
+  }, 
+  "url": "https://developer.mbed.org/platforms/FRDM-KL05Z/", 
+  "vendor": "Freescale"
+}
