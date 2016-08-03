@@ -1,0 +1,17 @@
+{
+  "build": {
+    "cpu": "cortex-m4", 
+    "f_cpu": "120000000L", 
+    "mcu": "mk64fn1m0vll12"
+  }, 
+  "frameworks": [
+    "mbed"
+  ], 
+  "name": "Freescale Kinetis FRDM-K64F", 
+  "upload": {
+    "maximum_ram_size": 262144, 
+    "maximum_size": 1048576
+  }, 
+  "url": "https://developer.mbed.org/platforms/FRDM-K64F/", 
+  "vendor": "Freescale"
+}

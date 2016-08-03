@@ -1,0 +1,17 @@
+{
+  "build": {
+    "cpu": "cortex-m4", 
+    "f_cpu": "120000000L", 
+    "mcu": "mk22fn512vlh12"
+  }, 
+  "frameworks": [
+    "mbed"
+  ], 
+  "name": "Freescale Kinetis FRDM-K22F", 
+  "upload": {
+    "maximum_ram_size": 131072, 
+    "maximum_size": 524288
+  }, 
+  "url": "https://developer.mbed.org/platforms/FRDM-K22F/", 
+  "vendor": "Freescale"
+}
