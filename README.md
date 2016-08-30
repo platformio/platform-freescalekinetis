@@ -16,5 +16,5 @@ Freescale Kinetis Microcontrollers is family of multiple hardware- and software-
 > platformio platform install freescalekinetis
 
 # install development version
-> platformio platform install https://github.com/platformio/platform-freescalekinetis/archive/develop.zip
+> platformio platform install https://github.com/platformio/platform-freescalekinetis.git
 ```

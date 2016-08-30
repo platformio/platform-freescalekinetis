@@ -1,17 +1,26 @@
 language: python
 python:
-    - "2.7"
+  - "2.7"
 
 env:
-    - PLATFORMIO_PROJECT_DIR=examples/mbed-blink
-    - PLATFORMIO_PROJECT_DIR=examples/mbed-dsp
-    - PLATFORMIO_PROJECT_DIR=examples/mbed-http-client
-    - PLATFORMIO_PROJECT_DIR=examples/mbed-rtos
-    - PLATFORMIO_PROJECT_DIR=examples/mbed-serial
+  - PLATFORMIO_PROJECT_DIR=examples/mbed-blink
+  - PLATFORMIO_PROJECT_DIR=examples/mbed-dsp
+  - PLATFORMIO_PROJECT_DIR=examples/mbed-http-client
+  - PLATFORMIO_PROJECT_DIR=examples/mbed-rtos
+  - PLATFORMIO_PROJECT_DIR=examples/mbed-serial
 
 install:
-    - pip install -U https://github.com/platformio/platformio/archive/feature/platformio-30.zip
-    - platformio platform install file://.
+  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - platformio platform install file://.
 
 script:
-    - platformio run -d $PLATFORMIO_PROJECT_DIR
+  - platformio run -d $PLATFORMIO_PROJECT_DIR
+
+notifications:
+  email: false
+
+  slack:
+    rooms:
+      secure: EIi9Tl5oTNCc9mHz6Ir4aFJXxIscKt7MzPBYAc2ztxaSI/CjK2cfoAmvAlI454Eptpqyad4j08jmPoDcVeLCcK0weMpsbNOFM1oGflf3Ao7jP48gfJwiQ+1dHX2iE7UWycoTfEP/xWEmakXdk6XwA9iy9rjzWXwMqUpVYETu3nMGTNizH2AMHs9rxecOXUhQizVOrubdNtf7g3DEWfEMtrjEGQ67RBzr/DEE9C5D079QCGVSEPAWfBbZA0N+vKE8+WciChfDp+bdfVKoOOoGhEN8KFM4UE832aidnMWSvOUNyp8DYPOIpb99pOpv76lMoXq6AN64gu5ZdMvGknolNSBynP4FuAC3rCbVWpdA3LmrTRA6yhX66W+rpx4Ak+ggSbaZNEIqF5APa9zsbHq6rz+LC7Y36Ckg4P0Z82fr799ui54leV5QJBfDRInepLizwFK7AqZNJQGrh5b2fwg7j5BWqGqUtrd0QPY3crt+PyFdRAUWNiEET13QcnjaTYDAB3BqfHODAZ916XmIXxz/kEvQrnAPlyzv9YZCRz82oHSjrhaFUvZ02qwTGZXS5ChQyZisnp1Z13vJ4tXGHnMWr//8L8FeFdf8eze+yqYoPhj6MJYCGboNpl3v7Mf+2m6bFtHQrzjY7eD4JHgpZtruyrm3XEixRdVLm77Jb5RWqo0=
+    on_failure: always
+    on_success: change
