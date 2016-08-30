@@ -4,19 +4,16 @@
   "description": "Freescale Kinetis Microcontrollers is family of multiple hardware- and software-compatible ARM Cortex-M0+, Cortex-M4 and Cortex-M7-based MCU series. Kinetis MCUs offer exceptional low-power performance, scalability and feature integration.",
   "url": "http://www.freescale.com/webapp/sps/site/homepage.jsp?code=KINETIS",
   "homepage": "http://platformio.org/platforms/freescalekinetis",
-  "license": {
-    "type": "Apache-2.0",
-    "url": "http://opensource.org/licenses/apache2.0.php"
-  },
+  "license": "Apache-2.0",
   "engines": {
-    "platformio": "~3.0.0",
+    "platformio": "^3.0.0",
     "scons": ">=2.3.0,<2.6.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/platformio/platform-freescalekinetis.git"
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "https://sourceforge.net/projects/platformio-storage/files/packages/manifest.json/download",
