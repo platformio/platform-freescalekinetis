@@ -12,7 +12,7 @@ Freescale Kinetis Microcontrollers is family of multiple hardware- and software-
 1. [Install PlatformIO CLI](http://docs.platformio.org/en/latest/installation.html)
 2. Install Freescale Kinetis development platform:
 ```bash
-# isntall the latest stable version
+# install the latest stable version
 > platformio platform install freescalekinetis
 
 # install development version

@@ -1,0 +1,17 @@
+{
+  "build": {
+    "cpu": "cortex-m0plus",
+    "f_cpu": "48000000L",
+    "mcu": "mkl27z64vlh4"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Freescale Kinetis FRDM-KL27Z",
+  "upload": {
+    "maximum_ram_size": 16384,
+    "maximum_size": 65536
+  },
+  "url": "http://www.nxp.com/products/software-and-tools/hardware-development-tools/freedom-development-boards/freedom-development-platform-for-kinetis-kl17-and-kl27-mcus:FRDM-KL27Z",
+  "vendor": "Freescale"
+}

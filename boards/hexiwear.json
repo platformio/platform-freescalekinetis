@@ -1,0 +1,17 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "120000000L",
+    "mcu": "mk64fn1m0vdc12"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Hexiwear",
+  "upload": {
+    "maximum_ram_size": 262144,
+    "maximum_size": 1048576
+  },
+  "url": "https://developer.mbed.org/platforms/Hexiwear/",
+  "vendor": "MikroElektronika"
+}
