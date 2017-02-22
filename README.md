@@ -9,7 +9,7 @@ Freescale Kinetis Microcontrollers is family of multiple hardware- and software-
 
 # Usage
 
-1. [Install PlatformIO Core](http://docs.platformio.org/en/latest/core.html)
+1. [Install PlatformIO Core](http://docs.platformio.org/page/core.html)
 2. Install Freescale Kinetis development platform:
 ```bash
 # install the latest stable version
