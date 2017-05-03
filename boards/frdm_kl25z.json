@@ -1,17 +1,32 @@
 {
   "build": {
-    "cpu": "cortex-m0plus", 
-    "f_cpu": "48000000L", 
+    "cpu": "cortex-m0plus",
+    "f_cpu": "48000000L",
     "mcu": "mkl25z128vlk4"
-  }, 
+  },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-f", "scripts/target/kl25.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
   "frameworks": [
     "mbed"
-  ], 
-  "name": "Freescale Kinetis FRDM-KL25Z", 
+  ],
+  "name": "Freescale Kinetis FRDM-KL25Z",
   "upload": {
-    "maximum_ram_size": 16384, 
+    "maximum_ram_size": 16384,
     "maximum_size": 131072
-  }, 
-  "url": "https://developer.mbed.org/platforms/KL25Z/", 
+  },
+  "url": "https://developer.mbed.org/platforms/KL25Z/",
   "vendor": "Freescale"
 }

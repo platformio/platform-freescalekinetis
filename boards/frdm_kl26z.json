@@ -4,6 +4,22 @@
     "f_cpu": "48000000L",
     "mcu": "mkl26z128vlh4"
   },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-c", "set CHIPNAME kl26",
+            "-f", "scripts/target/klx.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
   "frameworks": [
     "mbed"
   ],

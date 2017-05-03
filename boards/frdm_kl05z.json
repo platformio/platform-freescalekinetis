@@ -1,17 +1,33 @@
 {
   "build": {
-    "cpu": "cortex-m0plus", 
-    "f_cpu": "48000000L", 
+    "cpu": "cortex-m0plus",
+    "f_cpu": "48000000L",
     "mcu": "mkl05z32vfm4"
-  }, 
+  },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-c", "set CHIPNAME kl05",
+            "-f", "scripts/target/klx.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
   "frameworks": [
     "mbed"
-  ], 
-  "name": "Freescale Kinetis FRDM-KL05Z", 
+  ],
+  "name": "Freescale Kinetis FRDM-KL05Z",
   "upload": {
-    "maximum_ram_size": 4096, 
+    "maximum_ram_size": 4096,
     "maximum_size": 32768
-  }, 
-  "url": "https://developer.mbed.org/platforms/FRDM-KL05Z/", 
+  },
+  "url": "https://developer.mbed.org/platforms/FRDM-KL05Z/",
   "vendor": "Freescale"
 }

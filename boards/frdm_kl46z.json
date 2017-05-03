@@ -1,17 +1,32 @@
 {
   "build": {
-    "cpu": "cortex-m0plus", 
-    "f_cpu": "48000000L", 
+    "cpu": "cortex-m0plus",
+    "f_cpu": "48000000L",
     "mcu": "mkl46z256vll4"
-  }, 
+  },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-f", "scripts/target/kl46.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
   "frameworks": [
     "mbed"
-  ], 
-  "name": "Freescale Kinetis FRDM-KL46Z", 
+  ],
+  "name": "Freescale Kinetis FRDM-KL46Z",
   "upload": {
-    "maximum_ram_size": 32768, 
+    "maximum_ram_size": 32768,
     "maximum_size": 262144
-  }, 
-  "url": "https://developer.mbed.org/platforms/FRDM-KL46Z/", 
+  },
+  "url": "https://developer.mbed.org/platforms/FRDM-KL46Z/",
   "vendor": "Freescale"
 }

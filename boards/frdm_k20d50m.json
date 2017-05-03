@@ -1,17 +1,33 @@
 {
   "build": {
-    "cpu": "cortex-m4", 
-    "f_cpu": "48000000L", 
+    "cpu": "cortex-m4",
+    "f_cpu": "48000000L",
     "mcu": "mk20dx128vlh5"
-  }, 
+  },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-c", "set CHIPNAME k20",
+            "-f", "scripts/target/kx.cfg"
+          ]
+        },
+        "onboard": true
+      }
+    }
+  },
   "frameworks": [
     "mbed"
-  ], 
-  "name": "Freescale Kinetis FRDM-K20D50M", 
+  ],
+  "name": "Freescale Kinetis FRDM-K20D50M",
   "upload": {
-    "maximum_ram_size": 16384, 
+    "maximum_ram_size": 16384,
     "maximum_size": 131072
-  }, 
-  "url": "https://developer.mbed.org/platforms/FRDM-K20D50M/", 
+  },
+  "url": "https://developer.mbed.org/platforms/FRDM-K20D50M/",
   "vendor": "Freescale"
 }

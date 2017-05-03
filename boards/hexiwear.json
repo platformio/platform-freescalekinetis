@@ -4,6 +4,21 @@
     "f_cpu": "120000000L",
     "mcu": "mk64fn1m0vdc12"
   },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-c", "set CHIPNAME k64",
+            "-f", "scripts/target/kx.cfg"
+          ]
+        }
+      }
+    }
+  },
   "frameworks": [
     "mbed"
   ],
