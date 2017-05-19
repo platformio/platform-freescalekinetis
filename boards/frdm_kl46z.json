@@ -15,6 +15,7 @@
             "-f", "scripts/target/kl46.cfg"
           ]
         },
+        "preload": true,
         "onboard": true
       }
     }

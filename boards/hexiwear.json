@@ -15,7 +15,8 @@
             "-c", "set CHIPNAME k64",
             "-f", "scripts/target/kx.cfg"
           ]
-        }
+        },
+        "preload": true
       }
     }
   },
