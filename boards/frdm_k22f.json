@@ -16,7 +16,7 @@
             "-f", "scripts/target/kx.cfg"
           ]
         },
-        "preload": true,
+        "load_cmd": "preload",
         "onboard": true
       }
     }

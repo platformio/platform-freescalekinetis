@@ -16,7 +16,7 @@
             "-f", "scripts/target/klx.cfg"
           ]
         },
-        "preload": true,
+        "load_cmd": "preload",
         "onboard": true
       }
     }
