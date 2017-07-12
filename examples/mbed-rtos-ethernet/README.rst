@@ -20,7 +20,7 @@ How to build PlatformIO based project
 .. code-block:: bash
 
     # Change directory to example
-    > cd platform-freescalekinetis/examples/mbed-http-client
+    > cd platform-freescalekinetis/examples/mbed-rtos-ethernet
 
     # Build project
     > platformio run
