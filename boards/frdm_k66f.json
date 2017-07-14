@@ -1,0 +1,34 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "180000000L",
+    "mcu": "mk66fn2m0vmd18"
+  },
+  "debug": {
+    "tools": {
+      "cmsis-dap": {
+        "server": {
+          "package": "tool-openocd",
+          "executable": "bin/openocd",
+          "arguments": [
+            "-f", "scripts/interface/cmsis-dap.cfg",
+            "-c", "set CHIPNAME k66",
+            "-f", "scripts/target/kx.cfg"
+          ]
+        },
+        "preload": true,
+        "onboard": true
+      }
+    }
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Freescale Kinetis FRDM-K66F",
+  "upload": {
+    "maximum_ram_size": 262144,
+    "maximum_size": 2097152
+  },
+  "url": "https://developer.mbed.org/platforms/FRDM-K66F/",
+  "vendor": "Freescale"
+}
