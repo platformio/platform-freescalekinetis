@@ -4,6 +4,9 @@
     "f_cpu": "120000000L",
     "mcu": "mk22fn512vlh12"
   },
+  "connectivity": [
+    "can"
+  ],
   "debug": {
     "tools": {
       "cmsis-dap": {

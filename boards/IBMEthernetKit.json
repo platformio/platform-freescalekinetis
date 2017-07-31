@@ -4,6 +4,9 @@
     "f_cpu": "120000000L",
     "mcu": "mk64fn1m0vll12"
   },
+  "connectivity": [
+    "ethernet"
+  ],
   "debug": {
     "tools": {
       "cmsis-dap": {
