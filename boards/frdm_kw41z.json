@@ -1,12 +1,11 @@
 {
   "build": {
-    "cpu": "cortex-m4",
-    "f_cpu": "180000000L",
-    "mcu": "mk66fn2m0vmd18"
+    "cpu": "cortex-m0plus",
+    "f_cpu": "48000000L",
+    "mcu": "mkw41z512vht4"
   },
   "connectivity": [
-    "ethernet",
-    "can"
+    "bluetooth"
   ],
   "debug": {
     "tools": {
@@ -16,11 +15,11 @@
           "executable": "bin/openocd",
           "arguments": [
             "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k66",
+            "-c", "set CHIPNAME kw41",
             "-f", "scripts/target/kx.cfg"
           ]
         },
-        "preload": true,
+        "load_cmd": "preload",
         "onboard": true
       }
     }
@@ -28,11 +27,11 @@
   "frameworks": [
     "mbed"
   ],
-  "name": "Freescale Kinetis FRDM-K66F",
+  "name": "Freescale Kinetis FRDM-KW41Z",
   "upload": {
-    "maximum_ram_size": 262144,
-    "maximum_size": 2097152
+    "maximum_ram_size": 131072,
+    "maximum_size": 524288
   },
-  "url": "https://developer.mbed.org/platforms/FRDM-K66F/",
+  "url": "https://os.mbed.com/platforms/FRDM-KW41Z/",
   "vendor": "Freescale"
 }
