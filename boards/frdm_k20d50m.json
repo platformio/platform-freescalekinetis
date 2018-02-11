@@ -8,21 +8,8 @@
     "can"
   ],
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k20",
-            "-f", "scripts/target/kx.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "k20d50m",
+    "jlink_device": "MK20DX128xxx5"
   },
   "frameworks": [
     "mbed"
@@ -30,7 +17,13 @@
   "name": "Freescale Kinetis FRDM-K20D50M",
   "upload": {
     "maximum_ram_size": 16384,
-    "maximum_size": 131072
+    "maximum_size": 131072,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/FRDM-K20D50M/",
   "vendor": "Freescale"

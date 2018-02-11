@@ -8,21 +8,8 @@
     "bluetooth"
   ],
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME kw41",
-            "-f", "scripts/target/kx.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "kw41z4",
+    "jlink_device": "MKW41Z512xxx4"
   },
   "frameworks": [
     "mbed"
@@ -30,7 +17,13 @@
   "name": "Freescale Kinetis FRDM-KW41Z",
   "upload": {
     "maximum_ram_size": 131072,
-    "maximum_size": 524288
+    "maximum_size": 524288,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://os.mbed.com/platforms/FRDM-KW41Z/",
   "vendor": "Freescale"

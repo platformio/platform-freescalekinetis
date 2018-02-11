@@ -33,10 +33,10 @@
       "optional": true,
       "version": "~4.50703.0"
     },
-    "tool-openocd": {
-      "type": "debugger",
+    "tool-pyocd": {
+      "type": "uploader",
       "optional": true,
-      "version": "~1.1000.0"
+      "version": "~0.801.0"
     }
   }
 }
