@@ -9,21 +9,8 @@
     "can"
   ],
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k66",
-            "-f", "scripts/target/kx.cfg"
-          ]
-        },
-        "preload": true,
-        "onboard": true
-      }
-    }
+    "pyocd_target": "k66f18",
+    "jlink_device": "MK66FN2M0xxx18"
   },
   "frameworks": [
     "mbed"
@@ -31,7 +18,13 @@
   "name": "Freescale Kinetis FRDM-K66F",
   "upload": {
     "maximum_ram_size": 262144,
-    "maximum_size": 2097152
+    "maximum_size": 2097152,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/FRDM-K66F/",
   "vendor": "Freescale"

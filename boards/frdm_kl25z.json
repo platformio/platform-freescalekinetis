@@ -5,20 +5,8 @@
     "mcu": "mkl25z128vlk4"
   },
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-f", "scripts/target/kl25.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "kl25z",
+    "jlink_device": "MKL25Z128xxx4"
   },
   "frameworks": [
     "mbed"
@@ -26,7 +14,14 @@
   "name": "Freescale Kinetis FRDM-KL25Z",
   "upload": {
     "maximum_ram_size": 16384,
-    "maximum_size": 131072
+    "maximum_size": 131072,
+    "protocol": "mbed",
+    "protocols": [
+      "blackmagic",
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/KL25Z/",
   "vendor": "Freescale"

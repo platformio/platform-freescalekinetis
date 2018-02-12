@@ -10,15 +10,16 @@
     "wifi"
   ],
   "debug": {
+    "jlink_device": "MKW41Z512xxx4",
     "tools": {
       "cmsis-dap": {
         "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
+          "package": "tool-pyocd",
+          "executable": "$PYTHONEXE",
           "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k64",
-            "-f", "scripts/target/kx.cfg"
+            "pyocd-gdbserver.py", 
+             "-t", 
+             "k64f"
           ]
         },
         "load_cmd": "preload"
@@ -31,7 +32,13 @@
   "name": "Hexiwear",
   "upload": {
     "maximum_ram_size": 262144,
-    "maximum_size": 1048576
+    "maximum_size": 1048576,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/Hexiwear/",
   "vendor": "MikroElektronika"

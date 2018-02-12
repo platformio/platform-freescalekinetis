@@ -5,21 +5,8 @@
     "mcu": "mkl05z32vfm4"
   },
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME kl05",
-            "-f", "scripts/target/klx.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "kl05z",
+    "jlink_device": "MKL05Z32xxx4"
   },
   "frameworks": [
     "mbed"
@@ -27,7 +14,13 @@
   "name": "Freescale Kinetis FRDM-KL05Z",
   "upload": {
     "maximum_ram_size": 4096,
-    "maximum_size": 32768
+    "maximum_size": 32768,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/FRDM-KL05Z/",
   "vendor": "Freescale"

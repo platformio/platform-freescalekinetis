@@ -8,21 +8,8 @@
     "can"
   ],
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k22",
-            "-f", "scripts/target/kx.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "k22f",
+    "jlink_device": "MK22FN512xxx12"
   },
   "frameworks": [
     "mbed"
@@ -30,7 +17,13 @@
   "name": "Freescale Kinetis FRDM-K22F",
   "upload": {
     "maximum_ram_size": 131072,
-    "maximum_size": 524288
+    "maximum_size": 524288,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "https://developer.mbed.org/platforms/FRDM-K22F/",
   "vendor": "Freescale"

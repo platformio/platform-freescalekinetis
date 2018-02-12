@@ -8,21 +8,8 @@
     "ethernet"
   ],
   "debug": {
-    "tools": {
-      "cmsis-dap": {
-        "server": {
-          "package": "tool-openocd",
-          "executable": "bin/openocd",
-          "arguments": [
-            "-f", "scripts/interface/cmsis-dap.cfg",
-            "-c", "set CHIPNAME k64",
-            "-f", "scripts/target/kx.cfg"
-          ]
-        },
-        "load_cmd": "preload",
-        "onboard": true
-      }
-    }
+    "pyocd_target": "k64f",
+    "jlink_device": "MK64FN1M0xxx12"
   },
   "frameworks": [
     "mbed"
@@ -30,7 +17,13 @@
   "name": "Ethernet IoT Starter Kit",
   "upload": {
     "maximum_ram_size": 262144,
-    "maximum_size": 1048576
+    "maximum_size": 1048576,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
   },
   "url": "http://developer.mbed.org/platforms/IBMEthernetKit/",
   "vendor": "Freescale"
