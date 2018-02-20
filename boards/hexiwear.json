@@ -5,7 +5,7 @@
     "mcu": "mk64fn1m0vdc12"
   },
   "connectivity": [
-    "bluetooth", 
+    "bluetooth",
     "can",
     "wifi"
   ],
@@ -13,16 +13,16 @@
     "jlink_device": "MKW41Z512xxx4",
     "tools": {
       "cmsis-dap": {
+        "load_cmd": "preload",
         "server": {
-          "package": "tool-pyocd",
-          "executable": "$PYTHONEXE",
           "arguments": [
-            "pyocd-gdbserver.py", 
-             "-t", 
-             "k64f"
-          ]
-        },
-        "load_cmd": "preload"
+            "pyocd-gdbserver.py",
+            "-t",
+            "k64f"
+          ],
+          "executable": "$PYTHONEXE",
+          "package": "tool-pyocd"
+        }
       }
     }
   },
