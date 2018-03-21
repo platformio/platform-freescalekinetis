@@ -5,8 +5,8 @@
     "mcu": "mkl46z256vll4"
   },
   "debug": {
-    "pyocd_target": "kl46z",
-    "jlink_device": "MKL46Z256xxx4"
+    "jlink_device": "MKL46Z256xxx4",
+    "pyocd_target": "kl46z"
   },
   "frameworks": [
     "mbed"

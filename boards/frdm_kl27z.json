@@ -5,8 +5,8 @@
     "mcu": "mkl27z64vlh4"
   },
   "debug": {
-    "pyocd_target": "kl27z4",
-    "jlink_device": "MKL27Z64xxx4"
+    "jlink_device": "MKL27Z64xxx4",
+    "pyocd_target": "kl27z4"
   },
   "frameworks": [
     "mbed"

@@ -9,8 +9,8 @@
     "can"
   ],
   "debug": {
-    "pyocd_target": "k66f18",
-    "jlink_device": "MK66FN2M0xxx18"
+    "jlink_device": "MK66FN2M0xxx18",
+    "pyocd_target": "k66f18"
   },
   "frameworks": [
     "mbed"

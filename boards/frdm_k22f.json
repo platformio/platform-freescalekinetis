@@ -8,8 +8,8 @@
     "can"
   ],
   "debug": {
-    "pyocd_target": "k22f",
-    "jlink_device": "MK22FN512xxx12"
+    "jlink_device": "MK22FN512xxx12",
+    "pyocd_target": "k22f"
   },
   "frameworks": [
     "mbed"

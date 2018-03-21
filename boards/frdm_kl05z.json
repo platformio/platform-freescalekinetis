@@ -5,8 +5,8 @@
     "mcu": "mkl05z32vfm4"
   },
   "debug": {
-    "pyocd_target": "kl05z",
-    "jlink_device": "MKL05Z32xxx4"
+    "jlink_device": "MKL05Z32xxx4",
+    "pyocd_target": "kl05z"
   },
   "frameworks": [
     "mbed"

@@ -8,8 +8,8 @@
     "ethernet"
   ],
   "debug": {
-    "pyocd_target": "k64f",
-    "jlink_device": "MK64FN1M0xxx12"
+    "jlink_device": "MK64FN1M0xxx12",
+    "pyocd_target": "k64f"
   },
   "frameworks": [
     "mbed"
