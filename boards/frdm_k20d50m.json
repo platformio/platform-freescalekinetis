@@ -9,7 +9,8 @@
   ],
   "debug": {
     "jlink_device": "MK20DX128xxx5",
-    "pyocd_target": "k20d50m"
+    "pyocd_target": "k20d50m",
+    "svd_path": "MK20D5.svd"
   },
   "frameworks": [
     "mbed"
