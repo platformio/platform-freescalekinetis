@@ -9,7 +9,8 @@
   ],
   "debug": {
     "jlink_device": "MK64FN1M0xxx12",
-    "pyocd_target": "k64f"
+    "pyocd_target": "k64f",
+    "svd_path": "MK64F12.svd"
   },
   "frameworks": [
     "mbed"

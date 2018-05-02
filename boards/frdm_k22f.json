@@ -9,7 +9,8 @@
   ],
   "debug": {
     "jlink_device": "MK22FN512xxx12",
-    "pyocd_target": "k22f"
+    "pyocd_target": "k22f",
+    "svd_path": "MK22F51212.svd"
   },
   "frameworks": [
     "mbed"

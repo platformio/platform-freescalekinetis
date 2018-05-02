@@ -9,7 +9,8 @@
   ],
   "debug": {
     "jlink_device": "MKW41Z512xxx4",
-    "pyocd_target": "kw41z4"
+    "pyocd_target": "kw41z4",
+    "svd_path": "MKW41Z4.svd"
   },
   "frameworks": [
     "mbed"

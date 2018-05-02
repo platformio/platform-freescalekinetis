@@ -10,7 +10,8 @@
   ],
   "debug": {
     "jlink_device": "MK66FN2M0xxx18",
-    "pyocd_target": "k66f18"
+    "pyocd_target": "k66f18",
+    "svd_path": "MK66F18.svd"
   },
   "frameworks": [
     "mbed"

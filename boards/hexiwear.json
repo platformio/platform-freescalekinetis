@@ -10,7 +10,8 @@
     "wifi"
   ],
   "debug": {
-    "jlink_device": "MKW41Z512xxx4",
+    "jlink_device": "MK64FN1M0xxx12",
+    "svd_path": "MK64F12.svd",
     "tools": {
       "cmsis-dap": {
         "load_cmd": "preload",

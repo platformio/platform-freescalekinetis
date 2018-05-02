@@ -6,7 +6,8 @@
   },
   "debug": {
     "jlink_device": "MKL25Z128xxx4",
-    "pyocd_target": "kl25z"
+    "pyocd_target": "kl25z",
+    "svd_path": "MKL25Z4.svd"
   },
   "frameworks": [
     "mbed"
