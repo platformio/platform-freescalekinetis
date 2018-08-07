@@ -1,0 +1,25 @@
+{
+  "build": {
+    "cpu": "cortex-m0plus",
+    "f_cpu": "96000000L",
+    "mcu": "mkl82z128vlk7"
+  },
+  "debug": {
+    "jlink_device": "MKL82Z128xxx7"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Freescale Kinetis FRDM-KL82Z",
+  "upload": {
+    "maximum_ram_size": 98304,
+    "maximum_size": 131072,
+    "protocol": "mbed",
+    "protocols": [
+      "jlink",
+      "mbed"
+    ]
+  },
+  "url": "https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/l-seriesultra-low-powerm0-plus/freedom-development-board-for-kinetis-ultra-low-power-kl82-mcus:FRDM-KL82Z",
+  "vendor": "Freescale"
+}

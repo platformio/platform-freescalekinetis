@@ -62,6 +62,7 @@ class FreescalekinetisPlatform(PlatformBase):
         for link in ("blackmagic", "cmsis-dap", "jlink"):
             if link not in upload_protocols or link in debug['tools']:
                 continue
+
             if link == "blackmagic":
                 debug['tools']['blackmagic'] = {
                     "hwids": [["0x1d50", "0x6018"]],
