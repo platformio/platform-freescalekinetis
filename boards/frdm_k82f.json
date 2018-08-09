@@ -1,0 +1,27 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "150000000L",
+    "mcu": "mk82fn256vll15"
+  },
+  "debug": {
+    "jlink_device": "MK82FN256xxx15",
+    "pyocd_target": "k82f25615"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Freescale Kinetis FRDM-K82F",
+  "upload": {
+    "maximum_ram_size": 262144,
+    "maximum_size": 262144,
+    "protocol": "mbed",
+    "protocols": [
+      "cmsis-dap",
+      "jlink",
+      "mbed"
+    ]
+  },
+  "url": "https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/k-seriesperformancem4/k8x-secure/freedom-development-platform-for-kinetis-k82-k81-and-k80-mcus:FRDM-K82F",
+  "vendor": "Freescale"
+}

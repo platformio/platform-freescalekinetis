@@ -1,0 +1,25 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "50000000L",
+    "mcu": "mkw24d512"
+  },
+  "debug": {
+    "jlink_device": "MKW24D512xxx5"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "Freescale Kinetis FRDM-KW24D512",
+  "upload": {
+    "maximum_ram_size": 65536,
+    "maximum_size": 524288,
+    "protocol": "mbed",
+    "protocols": [
+      "jlink",
+      "mbed"
+    ]
+  },
+  "url": "https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/w-serieswireless-conn.m0-plus-m4/freedom-development-platform-for-kinetis-kw2x-mcus:FRDM-KW24D512",
+  "vendor": "Freescale"
+}
