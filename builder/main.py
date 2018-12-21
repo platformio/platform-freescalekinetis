@@ -174,7 +174,7 @@ elif debug_server and debug_server.get("package") == "tool-pyocd":
     ]
 
 # custom upload tool
-elif "UPLOADCMD" in env:
+elif upload_protocol == "custom":
     upload_actions = [env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")]
 
 else:
