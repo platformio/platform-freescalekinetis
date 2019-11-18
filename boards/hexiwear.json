@@ -2,7 +2,10 @@
   "build": {
     "cpu": "cortex-m4",
     "f_cpu": "120000000L",
-    "mcu": "mk64fn1m0vdc12"
+    "mcu": "mk64fn1m0vdc12",
+    "zephyr": {
+       "variant": "hexiwear_k64"
+    }
   },
   "connectivity": [
     "bluetooth",
@@ -28,7 +31,8 @@
     }
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+    "zephyr"
   ],
   "name": "Hexiwear",
   "upload": {

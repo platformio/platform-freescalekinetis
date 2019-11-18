@@ -10,6 +10,9 @@ env:
   - PLATFORMIO_PROJECT_DIR=examples/mbed-rtos-ethernet
   - PLATFORMIO_PROJECT_DIR=examples/mbed-rtos-tls-client
   - PLATFORMIO_PROJECT_DIR=examples/mbed-serial
+  - PLATFORMIO_PROJECT_DIR=examples/zephyr-blink
+  - PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
+  - PLATFORMIO_PROJECT_DIR=examples/zephyr-sensor-sx9500
 
 install:
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
