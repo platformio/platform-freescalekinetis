@@ -32,22 +32,22 @@ class FreescalekinetisPlatform(PlatformBase):
             if "windows" not in get_systype():
                 self.packages['tool-gperf']['optional'] = False
         
-            jlink_conds = [
-                "jlink" in variables.get(option, "")
-                for option in ("upload_protocol", "debug_tool")
-            ]
-            if variables.get("board"):
-                board_config = self.board_config(variables.get("board"))
-                jlink_conds.extend([
-                    "jlink" in board_config.get(key, "")
-                    for key in ("debug.default_tools", "upload.protocol")
-                ])
-            jlink_pkgname = "tool-jlink"
-            if not any(jlink_conds) and jlink_pkgname in self.packages:
-                del self.packages[jlink_pkgname]
+        jlink_conds = [
+            "jlink" in variables.get(option, "")
+            for option in ("upload_protocol", "debug_tool")
+        ]
+        if variables.get("board"):
+            board_config = self.board_config(variables.get("board"))
+            jlink_conds.extend([
+                "jlink" in board_config.get(key, "")
+                for key in ("debug.default_tools", "upload.protocol")
+            ])
+        jlink_pkgname = "tool-jlink"
+        if not any(jlink_conds) and jlink_pkgname in self.packages:
+            del self.packages[jlink_pkgname]
 
-            return PlatformBase.configure_default_packages(self, variables,
-                                                           targets)
+        return PlatformBase.configure_default_packages(self, variables,
+                                                       targets)
 
     def get_boards(self, id_=None):
         result = PlatformBase.get_boards(self, id_)

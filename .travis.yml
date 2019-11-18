@@ -14,6 +14,16 @@ env:
   - PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
   - PLATFORMIO_PROJECT_DIR=examples/zephyr-sensor-sx9500
 
+# Zephyr framework doesn't support python 2
+jobs:
+  exclude:
+    - python: "2.7"
+      env: PLATFORMIO_PROJECT_DIR=examples/zephyr-blink
+    - python: "2.7"
+      env: PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
+    - python: "2.7"
+      env: PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
+
 install:
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
   - platformio platform install file://.
