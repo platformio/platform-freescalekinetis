@@ -22,7 +22,7 @@ jobs:
     - python: "2.7"
       env: PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
     - python: "2.7"
-      env: PLATFORMIO_PROJECT_DIR=examples/zephyr-net-telnet
+      env: PLATFORMIO_PROJECT_DIR=examples/zephyr-sensor-sx9500
 
 install:
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
