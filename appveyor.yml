@@ -10,7 +10,7 @@ environment:
     - PLATFORMIO_PROJECT_DIR: "examples/mbed-serial"
     - PLATFORMIO_PROJECT_DIR: "examples/zephyr-blink"
     - PLATFORMIO_PROJECT_DIR: "examples/zephyr-net-telnet"
-    - PLATFORMIO_PROJECT_DIR: "examples/zephyr-sensor-sx9500"
+    # - PLATFORMIO_PROJECT_DIR: "examples/zephyr-sensor-sx9500"
 
 install:
   - cmd: git submodule update --init --recursive
