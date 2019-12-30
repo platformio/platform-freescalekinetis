@@ -10,7 +10,8 @@
     "svd_path": "MKL25Z4.svd"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+    "zephyr"
   ],
   "name": "Freescale Kinetis FRDM-KL25Z",
   "upload": {

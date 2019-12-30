@@ -13,7 +13,8 @@
     "svd_path": "MK64F12.svd"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+    "zephyr"
   ],
   "name": "Freescale Kinetis FRDM-K64F",
   "upload": {

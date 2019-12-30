@@ -15,6 +15,7 @@
 from platform import system
 
 from platformio.managers.platform import PlatformBase
+from platformio.util import get_systype
 
 
 class FreescalekinetisPlatform(PlatformBase):
@@ -23,6 +24,16 @@ class FreescalekinetisPlatform(PlatformBase):
         return True
 
     def configure_default_packages(self, variables, targets):
+    
+        if "zephyr" in variables.get("pioframework", []):
+            for p in self.packages:
+                if p.startswith("framework-zephyr-") or p in (
+                    "tool-cmake", "tool-dtc", "tool-ninja"):
+                    self.packages[p]["optional"] = False
+            self.packages['toolchain-gccarmnoneeabi']['version'] = "~1.80201.0"
+            if "windows" not in get_systype():
+                self.packages['tool-gperf']['optional'] = False
+        
         jlink_conds = [
             "jlink" in variables.get(option, "")
             for option in ("upload_protocol", "debug_tool")

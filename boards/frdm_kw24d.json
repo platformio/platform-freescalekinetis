@@ -2,13 +2,17 @@
   "build": {
     "cpu": "cortex-m4",
     "f_cpu": "50000000L",
-    "mcu": "mkw24d512"
+    "mcu": "mkw24d512",
+    "zephyr": {
+       "variant": "usb_kw24d512"
+    }
   },
   "debug": {
     "jlink_device": "MKW24D512xxx5"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+    "zephyr"
   ],
   "name": "Freescale Kinetis FRDM-KW24D512",
   "upload": {
