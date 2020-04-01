@@ -9,7 +9,8 @@
     "pyocd_target": "k82f25615"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+    "zephyr"
   ],
   "name": "Freescale Kinetis FRDM-K82F",
   "upload": {
