@@ -1,6 +1,6 @@
 # Freescale Kinetis: development platform for [PlatformIO](http://platformio.org)
-[![Build Status](https://travis-ci.org/platformio/platform-freescalekinetis.svg?branch=develop)](https://travis-ci.org/platformio/platform-freescalekinetis)
-[![Build status](https://ci.appveyor.com/api/projects/status/gbf7v0d19qir2o05/branch/develop?svg=true)](https://ci.appveyor.com/project/ivankravets/platform-freescalekinetis/branch/develop)
+
+[![Build Status](https://github.com/platformio/platform-freescalekinetis/workflows/Examples/badge.svg)](https://github.com/platformio/platform-freescalekinetis/actions)
 
 Freescale Kinetis Microcontrollers is family of multiple hardware- and software-compatible ARM Cortex-M0+, Cortex-M4 and Cortex-M7-based MCU series. Kinetis MCUs offer exceptional low-power performance, scalability and feature integration.
 

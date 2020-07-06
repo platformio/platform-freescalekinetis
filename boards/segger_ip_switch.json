@@ -1,0 +1,35 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "180000000L",
+    "mcu": "mk66fn2m0vmd18",
+    "zephyr": {
+      "variant": "ip_k66f"
+    }
+  },
+  "connectivity": [
+    "ethernet",
+    "can"
+  ],
+  "debug": {
+    "jlink_device": "MK66FN2M0xxx18",
+    "onboard_tools": [
+      "jlink"
+    ]
+  },
+  "frameworks": [
+    "zephyr"
+  ],
+  "name": "SEGGER IP Switch Board",
+  "upload": {
+    "maximum_ram_size": 262144,
+    "maximum_size": 2097152,
+    "protocol": "jlink",
+    "protocols": [
+      "jlink",
+      "mbed"
+    ]
+  },
+  "url": "https://www.segger.com/evaluate-our-software/segger/embosip-switch-board/",
+  "vendor": "SEGGER"
+}
