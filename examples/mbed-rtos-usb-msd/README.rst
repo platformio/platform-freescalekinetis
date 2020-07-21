@@ -20,7 +20,7 @@ How to build PlatformIO based project
 .. code-block:: bash
 
     # Change directory to example
-    > cd platform-freescalekinetis/examples/mbed-rtos-atcmdparser
+    > cd platform-freescalekinetis/examples/mbed-rtos-usb-msd
 
     # Build project
     > platformio run
