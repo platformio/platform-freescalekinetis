@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from platform import system
+import json
+import os
 
 from platformio.managers.platform import PlatformBase
 from platformio.util import get_systype
@@ -24,22 +25,31 @@ class FreescalekinetisPlatform(PlatformBase):
         return True
 
     def configure_default_packages(self, variables, targets):
-    
-        if "zephyr" in variables.get("pioframework", []):
+        board = variables.get("board")
+        frameworks = variables.get("pioframework", [])
+        if "mbed" in frameworks:
+            deprecated_boards_file = os.path.join(
+                self.get_dir(), "misc", "mbed_deprecated_boards.json")
+            if os.path.isfile(deprecated_boards_file):
+                with open(deprecated_boards_file) as fp:
+                    if board in json.load(fp):
+                        self.packages["framework-mbed"]["version"] = "~6.51504.0"
+            self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
+
+        if "zephyr" in frameworks:
             for p in self.packages:
                 if p.startswith("framework-zephyr-") or p in (
                     "tool-cmake", "tool-dtc", "tool-ninja"):
                     self.packages[p]["optional"] = False
-            self.packages['toolchain-gccarmnoneeabi']['version'] = "~1.80201.0"
             if "windows" not in get_systype():
                 self.packages['tool-gperf']['optional'] = False
-        
+
         jlink_conds = [
             "jlink" in variables.get(option, "")
             for option in ("upload_protocol", "debug_tool")
         ]
-        if variables.get("board"):
-            board_config = self.board_config(variables.get("board"))
+        if board:
+            board_config = self.board_config(board)
             jlink_conds.extend([
                 "jlink" in board_config.get(key, "")
                 for key in ("debug.default_tools", "upload.protocol")
@@ -111,7 +121,7 @@ class FreescalekinetisPlatform(PlatformBase):
                             "-port", "2331"
                         ],
                         "executable": ("JLinkGDBServerCL.exe"
-                                       if system() == "Windows" else
+                                       if "windows" in get_systype() else
                                        "JLinkGDBServer")
                     }
                 }

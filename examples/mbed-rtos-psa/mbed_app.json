@@ -1,0 +1,21 @@
+{
+    "target_overrides": {
+        "*": {
+             "platform.stdio-convert-newlines": true,
+             "rtos.mutex-num": 4,
+             "rtos.semaphore-num": 4,
+             "rtos.thread-num": 9,
+             "rtos.thread-user-stack-size": 8096,
+             "target.features_add": [
+                 "EXPERIMENTAL_API"
+             ]
+        },
+        "CY8CKIT_064S2_4343W": {
+            "rtos.thread-user-stack-size": 16384
+        }
+    },
+    "macros": [
+        "TFM_MULTI_CORE_MULTI_CLIENT_CALL=1",
+        "NUM_MAILBOX_QUEUE_SLOT=4"
+    ]
+}
