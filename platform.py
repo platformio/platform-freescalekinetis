@@ -103,7 +103,8 @@ class FreescalekinetisPlatform(PlatformBase):
                             "pyocd-gdbserver.py",
                             "-t",
                             pyocd_target
-                        ]
+                        ],
+                        "ready_pattern": "GDB server started on port"
                     }
                 }
 
