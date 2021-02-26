@@ -25,7 +25,8 @@
             "k64f"
           ],
           "executable": "$PYTHONEXE",
-          "package": "tool-pyocd"
+          "package": "tool-pyocd",
+          "ready_pattern": "GDB server started on port"
         }
       }
     }
