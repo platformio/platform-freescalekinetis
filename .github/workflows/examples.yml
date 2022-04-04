@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.7]
         example:
           - "examples/mbed-rtos-blink-baremetal"
@@ -19,9 +19,6 @@ jobs:
           - "examples/mbed-legacy-examples/mbed-rtos-tls-client"
           - "examples/zephyr-blink"
           - "examples/zephyr-net-telnet"
-        exclude:
-          - {python-version: 2.7, example: "examples/zephyr-blink"}
-          - {python-version: 2.7, example: "examples/zephyr-net-telnet"}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
