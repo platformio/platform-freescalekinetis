@@ -1,4 +1,4 @@
-# Freescale Kinetis: development platform for [PlatformIO](http://platformio.org)
+# Freescale Kinetis: development platform for [PlatformIO](https://platformio.org)
 
 [![Build Status](https://github.com/platformio/platform-freescalekinetis/workflows/Examples/badge.svg)](https://github.com/platformio/platform-freescalekinetis/actions)
 
@@ -9,7 +9,7 @@ Freescale Kinetis Microcontrollers is family of multiple hardware- and software-
 
 # Usage
 
-1. [Install PlatformIO](http://platformio.org)
+1. [Install PlatformIO](https://platformio.org)
 2. Create PlatformIO project and configure a platform option in [platformio.ini](https://docs.platformio.org/page/projectconf.html) file:
 
 ## Stable version
