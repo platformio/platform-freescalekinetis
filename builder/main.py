@@ -21,7 +21,6 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
                           DefaultEnvironment)
 
 env = DefaultEnvironment()
-env.SConscript("compat.py", exports="env")
 platform = env.PioPlatform()
 
 env.Replace(
