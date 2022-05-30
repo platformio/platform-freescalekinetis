@@ -130,22 +130,13 @@ class FreescalekinetisPlatform(PlatformBase):
         board.manifest["debug"] = debug
         return board
 
-    def configure_debug_options(self, initial_debug_options, ide_data):
-        debug_options = copy.deepcopy(initial_debug_options)
-        adapter_speed = initial_debug_options.get("speed")
-        if adapter_speed:
-            server_options = debug_options.get("server") or {}
-            server_executable = server_options.get("executable", "").lower()
-            if "jlink" in server_executable:
-                debug_options["server"]["arguments"].extend(
-                    ["-speed", adapter_speed]
+    def configure_debug_session(self, debug_config):
+        if debug_config.speed:
+            if "jlink" in (debug_config.server or {}).get("executable", "").lower():
+                debug_config.server["arguments"].extend(
+                    ["-speed", debug_config.speed]
                 )
-            elif "pyocd" in debug_options["server"]["package"]:
-                assert (
-                    adapter_speed.isdigit()
-                ), "pyOCD requires the debug frequency value in Hz, e.g. 4000"
-                debug_options["server"]["arguments"].extend(
-                    ["--frequency", "%d" % int(adapter_speed)]
+            elif "pyocd" in debug_config.server["package"]:
+                debug_config.server["arguments"].extend(
+                    ["--frequency", debug_config.speed]
                 )
-
-        return debug_options
