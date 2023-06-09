@@ -14,8 +14,6 @@ jobs:
           - "examples/mbed-rtos-ethernet-tls"
           - "examples/mbed-rtos-kvstore"
           - "examples/mbed-rtos-psa"
-          - "examples/mbed-legacy-examples/mbed-events"
-          - "examples/mbed-legacy-examples/mbed-rtos-tls-client"
           - "examples/zephyr-blink"
           - "examples/zephyr-net-telnet"
     runs-on: ${{ matrix.os }}
