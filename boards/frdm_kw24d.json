@@ -11,7 +11,6 @@
     "jlink_device": "MKW24D512xxx5"
   },
   "frameworks": [
-    "mbed",
     "zephyr"
   ],
   "name": "Freescale Kinetis FRDM-KW24D512",
