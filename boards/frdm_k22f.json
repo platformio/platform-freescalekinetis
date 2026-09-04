@@ -14,7 +14,8 @@
   },
   "frameworks": [
     "mbed",
-    "zephyr"
+    "zephyr",
+	"mbed-ce"
   ],
   "name": "Freescale Kinetis FRDM-K22F",
   "upload": {

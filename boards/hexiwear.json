@@ -33,7 +33,8 @@
   },
   "frameworks": [
     "mbed",
-    "zephyr"
+    "zephyr",
+	"mbed-ce"
   ],
   "name": "Hexiwear",
   "upload": {

@@ -14,7 +14,8 @@
     "svd_path": "MK66F18.svd"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+	"mbed-ce"
   ],
   "name": "Freescale Kinetis FRDM-K66F",
   "upload": {

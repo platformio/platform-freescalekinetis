@@ -10,7 +10,8 @@
     "svd_path": "MKL46Z4.svd"
   },
   "frameworks": [
-    "mbed"
+    "mbed",
+	"mbed-ce"
   ],
   "name": "Freescale Kinetis FRDM-KL46Z",
   "upload": {

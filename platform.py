@@ -29,8 +29,13 @@ class FreescalekinetisPlatform(PlatformBase):
     def configure_default_packages(self, variables, targets):
         board = variables.get("board")
         frameworks = variables.get("pioframework", [])
-        if "mbed" in frameworks:
+        if "mbed" in frameworks or "mbed-ce" in frameworks:
             self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
+            
+        if "mbed-ce" in frameworks:
+            for p in self.packages:
+                if p in ("tool-cmake", "tool-ninja"):
+                    self.packages[p]["optional"] = False
 
         if "zephyr" in frameworks:
             for p in self.packages:
